@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+}
+
+html {
+}
+
+body {
+    position: relative;
+    background-color: #74746C;
+    color: white;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template: 1fr auto / 1fr;
+    grid-template-areas: 
+        "main";
+        /* "footer"; */
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+@media screen and (min-width: 576px){
+    .container{
+        max-width: 540px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container{
+        max-width: 1140px;
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .container{
+        max-width: 1320px;
+    }
+}
+
+
+
+
+
+.main{
+    grid-area: main;
+}
+.main__container{
+    margin: 0 auto;
+}
+
+
+
+
+
+.sign-in-box{
+    height: 100vh;
+    align-self: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.sign-in_logo{
+    width: 150px;
+    height: 150px;
+    background-color: #94A583;
+    border-radius: 100%;
+}
+
+.sign-in-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    gap: 10px;
+}
+
+.sign-in-box button{
+    border-radius: 8px;
+    border: solid 2px #94A583;
+    background-color: #94A583;
+    color: whitesmoke;
+    width: fit-content;
+    padding: 5px 100px;
+    align-self: center;
+    font-size: inherit;
+}
+
+.sign-in-box button:hover{
+    transition: 0.3s all ease;
+    background-color: rgba(148, 165, 131, 0.67);
+}
+
+.sign-in-box p{
+    text-align: center;
+    color: #94A583;
+    font-size: 16px;
+}
+
+.input-box{
+    position: relative;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: #94A583 solid 2px;
+    background-color: transparent;
+    color: whitesmoke;
+    transition: 0.15s all ease;
+    font-size: inherit;
+    outline: solid 0px #94A583;
+}
+
+.input-box label{
+    position: absolute;
+    top: 30%;
+    left: 0;
+    padding: 0 10px;
+    color: whitesmoke;
+    pointer-events: none;
+    transition: 0.15s all ease;
+    font-size: inherit;
+}
+
+.input-box input:focus{
+    border-color: #94A583;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label{
+    padding: 0 5px;
+    transform: translate(10px, -150%);
+    background-color: #74746C;
+    font-size: 12px;
+    color: whitesmoke;
+}
+
+
+
+
+
+.staff-table{
+    width: 90%;
+    border-collapse: collapse;
+}
+.staff-table td,.staff-table th{
+    border: 2px solid #94A583;
+    padding: 5px 10px;
+    text-align: center
+    /* justify-content: center; */
+}
+.staff-table tr:nth-child(odd){
+    background: #74746C;
+}
+.staff-table tr:hover{background: rgba(0, 0, 0, 0.5);}
+
+
+
+
+
+/* Табы */
+.tab {
+    overflow: hidden;
+    border: 1px solid #74746C;
+    background-color: #94A583;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 18px;
+    color: whitesmoke;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #74746C;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
